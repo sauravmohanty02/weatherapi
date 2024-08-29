@@ -9,17 +9,12 @@ pipeline {
         }
         stage('qa') {
             steps {
-              bat '''
-           rmdir /S /Q weatherapi
-git clone https://github.com/sauravmohanty02/weatherapi.git'''
+             echo "yellow"
             }
         }
         stage('uat') {
             steps {
-               bat '''type nul > sample.txt
-git add .
-git commit -m "first commit"
-git push'''
+               echo "blue"
             }
         }
     }
